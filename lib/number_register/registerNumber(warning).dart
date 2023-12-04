@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class registerNum extends StatefulWidget {
-  registerNum({super.key});
+class registerNumWarning extends StatefulWidget {
+  registerNumWarning({super.key});
 
   @override
-  State<registerNum> createState() => _registerNumState();
+  State<registerNumWarning> createState() => _registerNumWarning();
 ////
 
 //////
 }
 
-class _registerNumState extends State<registerNum> {
+class _registerNumWarning extends State<registerNumWarning> {
   ////////////
   final TextEditingController _controller = TextEditingController();
   bool _isButtonEnabled = false;
@@ -91,6 +91,18 @@ class _registerNumState extends State<registerNum> {
                   ),
                 )
               ],
+            ),
+            SizedBox(height: 20,),
+            Container(
+              child: Row(
+                children: [
+                  
+                  Icon(Icons.warning_outlined,color: Colors.green,),
+                  SizedBox(width: 5, ),
+                  Text('Неверный код  подтверждения',style: TextStyle(color: Colors.green,fontSize: 14),)
+                  
+                ],
+              ),
             ),
             //end of 4
             SizedBox(
